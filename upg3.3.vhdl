@@ -57,9 +57,9 @@ begin
       q1_sync <= q1;
       q0_sync <= q0;
     end if;
-    if falling_edge(reset) then
-      q1 <= '0';
-      q0 <= '0';
+    if reset = '1' then
+      q1_sync <= '0';
+      q0_sync <= '0';
     end if;
   end process;
 
@@ -68,5 +68,5 @@ begin
   q1 <= rom_out(2);
   q0 <= rom_out(1);
   u <= rom_out(0);
-  
+
 end architecture;
