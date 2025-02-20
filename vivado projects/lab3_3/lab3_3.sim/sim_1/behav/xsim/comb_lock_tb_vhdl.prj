@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../TSEA22_lab3/TSEA22_lab3/Lab3_3/comb_lock.vhdl" \
+"../../../../../../TSEA22_lab3/TSEA22_lab3/Lab3_3/comb_lock_tb.vhdl" \
+
+# Do not sort compile order
+nosort

@@ -15,10 +15,10 @@ architecture arch of combination_lock is
 
   signal x1_sync : std_logic;
   signal x0_sync : std_logic;
+  signal q1_plus : std_logic;
+  signal q0_plus : std_logic;
   signal q1 : std_logic;
   signal q0 : std_logic;
-  signal q1_sync : std_logic;
-  signal q0_sync : std_logic;
   signal rom_out : std_logic_vector(2 downto 0);
 
   type rom is array (0 to 15) of std_logic_vector(2 downto 0);
@@ -54,19 +54,19 @@ begin
   process (clk, reset)
   begin
     if rising_edge(clk) then
-      q1_sync <= q1;
-      q0_sync <= q0;
+      q1 <= q1_plus;
+      q0 <= q0_plus;
     end if;
     if reset = '1' then
-      q1_sync <= '0';
-      q0_sync <= '0';
+      q1 <= '0';
+      q0 <= '0';
     end if;
   end process;
 
-  rom_out <= rom(to_integer(unsigned(q1_sync & q0_sync & x1_sync & x0_sync)));
+  rom_out <= mem(to_integer(unsigned(q1 & q0 & x1_sync & x0_sync)));
 
-  q1 <= rom_out(2);
-  q0 <= rom_out(1);
+  q1_plus <= rom_out(2);
+  q0_plus <= rom_out(1);
   u <= rom_out(0);
 
 end architecture;

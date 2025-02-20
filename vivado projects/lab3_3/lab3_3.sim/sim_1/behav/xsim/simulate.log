@@ -1,0 +1,13 @@
+Time resolution is 1 ps
+0 ms      /--------------------- 3.3: Comb lock --------------------------
+0 ms      | If you get an error, you have to look in your FSM diagram, and follow the jumps/states.
+0 ms      | Performing a number of actions/tests...
+0 ms      | 0: Reset the circuit.
+1250 ms   | 1: Test to unlock normally. 5 clock cycles between each action.
+4450 ms   | 2: Test that it stays unlocked.
+7650 ms   | 3: Test to lock.
+8850 ms   | 4: Test to enter invalid code.
+13050 ms  | 5: Test that x=00 is tested after reset.
+13050 ms  |   ({reset, x=01} -> x=01 -> x=11 -> should stay locked)
+15250 ms  | 6: Test with one clock cycle per input.
+17050 ms  \---- TEST BENCH DONE. Did you get any error message? -----------

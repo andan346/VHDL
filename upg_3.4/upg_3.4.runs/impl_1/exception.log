@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file X:\Documents\VHDL\upg_3.4\upg_3.4.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../upg3.4.vhdl" \
+"../../../../../upg3.4_tb.vhdl" \
+
+# Do not sort compile order
+nosort
