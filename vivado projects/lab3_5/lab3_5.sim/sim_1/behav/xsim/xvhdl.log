@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "X:/Documents/VHDL/TSEA22_lab3/TSEA22_lab3/Lab3_5/dice.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dice'
+INFO: [VRFC 10-163] Analyzing VHDL file "X:/Documents/VHDL/TSEA22_lab3/TSEA22_lab3/Lab3_5/dice_tb.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dice_tb'

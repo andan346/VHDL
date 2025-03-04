@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740146159">
+  <File Type="ROUTE-PWR" Name="kaskad_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="kaskad.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="kaskad_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="kaskad_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="kaskad_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="kaskad.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="kaskad_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="kaskad_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="kaskad_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="kaskad_opt.dcp"/>
+  <File Type="OPT-DRC" Name="kaskad_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="kaskad.hwdef"/>
+  <File Type="PWROPT-DCP" Name="kaskad_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="kaskad_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="kaskad_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="kaskad_placed.dcp"/>
+  <File Type="PLACE-IO" Name="kaskad_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="kaskad_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="kaskad_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="kaskad_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="kaskad_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="kaskad_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="kaskad_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="kaskad.bin"/>
+  <File Type="PLACE-TIMING" Name="kaskad_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="kaskad_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="kaskad_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="kaskad_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="kaskad.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="kaskad_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="kaskad_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="kaskad_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="kaskad.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="kaskad_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="kaskad_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="kaskad_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="kaskad_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="kaskad_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="kaskad_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="kaskad_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="kaskad_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="kaskad_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="kaskad_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="kaskad_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="kaskad_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="kaskad_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="kaskad_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="kaskad_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="kaskad_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="kaskad_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="kaskad_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="kaskad_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="kaskad_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="kaskad_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="kaskad_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="kaskad_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="kaskad_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="kaskad_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="kaskad_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="kaskad_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="kaskad.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="kaskad_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="kaskad_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="kaskad.nky"/>
+  <File Type="BITSTR-BMM" Name="kaskad_bd.bmm"/>
+  <File Type="PDI-FILE" Name="kaskad.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="kaskad_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="kaskad_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="kaskad.rcfi"/>
+  <File Type="CFI_FILE" Name="kaskad.cfi"/>
+  <File Type="RNPI_FILE" Name="kaskad.rnpi"/>
+  <File Type="NPI_FILE" Name="kaskad.npi"/>
+  <File Type="RBD_FILE" Name="kaskad.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="kaskad.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="kaskad.sysdef"/>
+  <File Type="BG-BGN" Name="kaskad.bgn"/>
+  <File Type="BG-DRC" Name="kaskad.drc"/>
+  <File Type="RDI-RDI" Name="kaskad.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="kaskad_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="kaskad_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../datorlektion/kaskad/kaskad.vhdl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="kaskad"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../datorlektion/counter/counter.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/kaskad.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

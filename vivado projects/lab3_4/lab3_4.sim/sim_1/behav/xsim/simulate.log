@@ -1,8 +1,3 @@
 Time resolution is 1 ps
-0 ms      /--------------------- 3.4: Timer --------------------------
-0 ms      | Performing a number of tests...
-0 ms      | Note: A separate process tests that LED <=> tidkvar = 0.
-0 ms      | 0: Reset the circuit.
-Failure: FAIL: Alarm /= 1 and tidkvar = 0.                                       :-(
-Time: 100 ms  Iteration: 0  Process: /timer_tb/line__153  File: X:/Documents/VHDL/TSEA22_lab3/TSEA22_lab3/Lab3_4/timer_tb.vhdl
-$finish called at time : 100 ms : File "X:/Documents/VHDL/TSEA22_lab3/TSEA22_lab3/Lab3_4/timer_tb.vhdl" Line 159
+Note: Simulation finished
+Time: 1300 ms  Iteration: 0  Process: /timer_tb/line__44  File: X:/Documents/VHDL/timer_tb2.vhdl

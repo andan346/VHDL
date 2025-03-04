@@ -24,7 +24,6 @@ architecture rtl of timer is
   signal start_sync0, start_sync : std_logic := '0';
   signal start_pulse : std_logic := '0';
   signal count : unsigned(3 downto 0) := (others => '0');
-  signal u : std_logic := '0';
   signal should_count : std_logic := '0';
 
   type rom is array (0 to 15) of std_logic_vector(6 downto 0);
@@ -47,25 +46,33 @@ architecture rtl of timer is
     "0001110"  -- F
   );
 begin
-  -- Synkronisera och enpulsa insignal för att bestämma om räknaren ska räkna
-  process(clk) begin
-    if rising_edge(clk) then
-      start_sync0  <= startknapp;
+  -- Synkronisera och enpulsa startsignal
+  process(clk, reset) begin
+    if reset = '1' then
+      start_sync0 <= '0';
       start_sync <= start_sync0;
-
-      start_pulse <= start_sync0 and not start_sync;
-
-      if start_pulse = '1' then
-        should_count <= '1';
-      end if;
+    elsif rising_edge(clk) then
+      start_sync0 <= startknapp;
+      start_sync <= start_sync0;
     end if;
   end process;
 
-  -- Räkna ner sålänge count > 0
-  process (clk) begin
-    if rising_edge(clk) then
-      if should_count = '1' and (not count = "0000") then
-        count <= count - to_unsigned(1, 4);
+  start_pulse <= start_sync0 and not start_sync;
+
+
+  -- Börja från 8, räkna ner 1 per klockflank tills den nått 0
+  process(clk, reset) begin
+    if reset = '1' then
+      count <= "0000";
+      should_count <= '0';
+    elsif rising_edge(clk) then
+      if start_pulse = '1' and should_count = '0' then
+        count <= "1000";
+        should_count <= '1';
+      elsif count = "0000" then
+        should_count <= '0';
+      else
+        count <= count - 1;
       end if;
     end if;
   end process;
@@ -74,5 +81,5 @@ begin
   seg <= mem(to_integer(count));
   dp  <= '1';  -- Ingen punkt
   an  <= "1110";  -- Välj sista siffran
-  alarm <= u;
+  alarm <= '1' when count = "0000" else '0';
 end architecture;

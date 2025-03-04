@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../TSEA22_lab4/TSEA22_lab4/Lab4_1/stopwatch.vhdl" \
+
+# Do not sort compile order
+nosort

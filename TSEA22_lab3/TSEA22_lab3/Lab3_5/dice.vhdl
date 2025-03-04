@@ -1,10 +1,10 @@
 -- dice.vhdl
--- Tryckknapp (T0) "roll" rullar tärningen
--- roll=0 : tärningen ligger stilla och visar ett värde
--- roll=1 : tärningen rullar
--- Strömbrytare (S0) "fake" väljer riktig eller falsk tärning
--- fake=0 : riktig tärning, dvs samma sannolikhet för 1,2,3,4,5 och 6
--- fake=1 : falsk tärning, dvs tre gånger högre sannolikhet för 6
+-- Tryckknapp (T0) "roll" rullar tï¿½rningen
+-- roll=0 : tï¿½rningen ligger stilla och visar ett vï¿½rde
+-- roll=1 : tï¿½rningen rullar
+-- Strï¿½mbrytare (S0) "fake" vï¿½ljer riktig eller falsk tï¿½rning
+-- fake=0 : riktig tï¿½rning, dvs samma sannolikhet fï¿½r 1,2,3,4,5 och 6
+-- fake=1 : falsk tï¿½rning, dvs tre gï¿½nger hï¿½gre sannolikhet fï¿½r 6
 -- Typically connect the following at the connector area of DigiMod
 -- sclk <-- 32kHz
 
@@ -25,6 +25,61 @@ end entity;
 
 architecture arch of dice is
   -- signals etc
+  signal roll_sync, fake_sync : std_logic := '0';
+  signal count : unsigned(3 downto 0) := (others => '0');
 
+  type rom is array (0 to 8) of std_logic_vector(6 downto 0);
+  constant mem : rom := (
+    "1000000", -- 0
+    "1111001", -- 1
+    "0100100", -- 2
+    "0110000", -- 3
+    "0011001", -- 4
+    "0010010", -- 5
+    "0000010", -- 6
+    "0000010", -- 6
+    "0000010"  -- 6
+  );
 begin
+
+  -- Synka roll och fake
+  process(clk, reset) begin
+    if reset = '1' then
+      roll_sync <= '0';
+      fake_sync <= '0';
+    elsif rising_edge(clk) then
+      roll_sync <= roll;
+      fake_sync <= fake;
+    end if;
+  end process;
+
+  -- VÃ¤lj frÃ¥n 8 om fake, annars frÃ¥n de normala 6
+  process(clk, reset) begin
+    if reset = '1' then
+      count <= "0001";
+    elsif rising_edge(clk) then
+      if roll_sync = '1' then
+        if fake_sync = '1' then
+          -- RÃ¤kna frÃ¥n 1 till 8 om och om
+          if count = "1000" then
+            count <= "0001";
+          else 
+            count <= count + 1;
+          end if;
+        else
+          -- RÃ¤kna frÃ¥n 1 till 6 om och om
+          if count = "0110" then
+            count <= "0001";
+          else
+            count <= count + "0001";
+          end if;
+        end if;
+      end if;
+    end if;
+  end process;
+
+  seg <= mem(to_integer(count));
+  dp  <= '1';  -- Ingen punkt
+  an  <= "1110";  -- VÃ¤lj sista siffran
+
 end architecture;
