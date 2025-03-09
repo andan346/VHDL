@@ -68,7 +68,7 @@ begin
       if strobe_ep = '1' then
 
         -- (0-9) Indata är en siffra
-        if unsigned(data) <= to_unsigned(9, 4) then
+        if unsigned(data) <= 9 then
 
           -- Applicera operator
           if operator = 15 then
@@ -81,17 +81,17 @@ begin
           number <= resize(unsigned(data), 5);
 
         -- (F-C) Indata är en operator
-        elsif unsigned(data) >= to_unsigned(12, 4) then
+        elsif unsigned(data) >= 12 then
 
           -- (=) Sätt resultatet till senaste nummer
-          if unsigned(data) = to_unsigned(13, 4) then
+          if unsigned(data) = 13 then
             number <= result;
           end if;
 
           -- (clr) Vid operator "clr"
-          if unsigned(data) = to_unsigned(12, 4) then
-            number <= "00000";
-            result <= "00000";
+          if unsigned(data) = 12 then
+            number <= (others => '0');
+            result <= (others => '0');
           end if;
 
           -- Sätt operator till indata
